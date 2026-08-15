@@ -10,8 +10,6 @@ import "github.com/volution/kawipiko/cmd/server"
 import "github.com/volution/kawipiko/cmd/archiver"
 import "github.com/volution/kawipiko/cmd/version"
 
-import _ "github.com/volution/kawipiko/lib/seccomp"
-
 
 
 
