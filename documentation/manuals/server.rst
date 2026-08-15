@@ -52,7 +52,6 @@ kawipiko -- blazingly fast static HTTP server
     --security-headers-disable
     --security-headers-tls
 
-    --seccomp-enable
     --limit-descriptors <count>
     --limit-memory      <MiB>
     --timeout-disable
@@ -194,15 +193,6 @@ Flags
 
     These instruct the browser to always use HTTPS for the served domain.
     (Useful even without HTTPS, when used behind a TLS terminator, load-balancer or proxy that do support HTTPS.)
-
-``--seccomp-enable``
-
-    On Linux, and if supported, enable a strict ``seccomp`` filter to reduce the potential attack surface in case of a security issue.
-
-    The current filter is the minimal set of ``syscall``'s required to have the server working (thus quite safe).
-    At each stage (opening the archive, indexing the archive, serving the archive) the non-required ``syscall``'s are filtered.
-
-    (At the moment the filter is quite strict and determined by experimentation.  If you enable ``seccomp`` and the server is ``kill``-ed, check ``auditd`` logs for the problematic ``syscall`` and open an issue report.)
 
 ``--limit-descriptors``, and ``--limit-memory``
 
