@@ -1,0 +1,4 @@
+untrusted comment: signature from minisign secret key
+RURyRsmb5Uuugpf1YQN/cNvBrVtU5GtYydqbmoXXCE79mnPnmQsZhgkzwvPwmerRFQOpQLX5jnVJAVz3RSOQlr7vh8p0ulU5sgk=
+trusted comment: kawipiko-server--freebsd--armv6--v0.1.0--preview
+sKEocaxqlqNYk5oDI0YM8o8DvXLgCQAE5k3cgj7zCnxjJXtWwqiYN386hgrTFQk7BCfAKHhR1I1bUCL5/GcGDQ==
