@@ -43,9 +43,6 @@
 :: benchmark / server / http2-split / 1x2 :: exec -- "${ZRUN}" ':: benchmark / server' http2-split "${@}" --processes 1 --threads 2
 :: benchmark / server / http2-split / 2x2 :: exec -- "${ZRUN}" ':: benchmark / server' http2-split "${@}" --processes 2 --threads 2
 
-:: benchmark / server / http3-quic / 1x1 :: exec -- "${ZRUN}" ':: benchmark / server' http3-quic "${@}" --processes 1 --threads 1
-:: benchmark / server / http3-quic / 1x2 :: exec -- "${ZRUN}" ':: benchmark / server' http3-quic "${@}" --processes 1 --threads 2
-
 :: benchmark / server / http-all / 1x1 :: exec -- "${ZRUN}" ':: benchmark / server' http-all "${@}" --processes 1 --threads 1
 :: benchmark / server / http-all / 1x2 :: exec -- "${ZRUN}" ':: benchmark / server' http-all "${@}" --processes 1 --threads 2
 
@@ -142,21 +139,6 @@
 :: benchmark / h2load / http2 / 2 :: exec -- "${ZRUN}" ':: benchmark / h2load / http2' "${@}" --threads 1 --clients 2
 :: benchmark / h2load / http2 / 1 :: exec -- "${ZRUN}" ':: benchmark / h2load / http2' "${@}" --threads 1 --clients 1
 
-:: benchmark / h2load / http3 / 16384 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 16384 --connection-inactivity-timeout 6s
-:: benchmark / h2load / http3 / 4096 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 4096
-:: benchmark / h2load / http3 / 2048 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 2048
-:: benchmark / h2load / http3 / 1024 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 1024
-:: benchmark / h2load / http3 / 512 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 512
-:: benchmark / h2load / http3 / 256 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 256
-:: benchmark / h2load / http3 / 128 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 128
-:: benchmark / h2load / http3 / 64 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 64
-:: benchmark / h2load / http3 / 32 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 32
-:: benchmark / h2load / http3 / 16 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 2 --clients 16
-:: benchmark / h2load / http3 / 8 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 1 --clients 8
-:: benchmark / h2load / http3 / 4 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 1 --clients 4
-:: benchmark / h2load / http3 / 2 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 1 --clients 2
-:: benchmark / h2load / http3 / 1 :: exec -- "${ZRUN}" ':: benchmark / h2load / http3' "${@}" --threads 1 --clients 1
-
 
 :: benchmark / hey / http / 16384 :: exec -- "${ZRUN}" ':: benchmark / hey / http' "${@}" -cpus 2 -c 16384 -t 6s
 :: benchmark / hey / http / 4096 :: exec -- "${ZRUN}" ':: benchmark / hey / http' "${@}" -cpus 2 -c 4096
@@ -190,8 +172,6 @@
 					--bind-2 127.9.185.194:8081
 					--bind-tls 127.9.185.194:8443
 					--bind-tls-2 127.9.185.194:8444
-					--bind-quic 127.9.185.194:8445
-					--http3-alt-svc 127.9.185.194:8445
 				)
 		;;
 		( http-fast )
@@ -230,12 +210,6 @@
 		( http2-split )
 			_arguments+=(
 					--bind-tls 127.9.185.194:8444
-				)
-		;;
-		( http3-quic )
-			_arguments+=(
-					--bind-quic 127.9.185.194:8445
-					--http3-alt-svc 127.9.185.194:8445
 				)
 		;;
 		( * )
@@ -585,10 +559,6 @@
 
 << benchmark / h2load / http2
 	exec -- "${ZRUN}" ':: benchmark / h2load' https 127.9.185.194:8444 "${@}" --npn-list=h2
-!!
-
-<< benchmark / h2load / http3
-	exec -- "${ZRUN}" ':: benchmark / h2load' https 127.9.185.194:8445 "${@}" --npn-list=h3
 !!
 
 --<< benchmark / h2load
