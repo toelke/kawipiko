@@ -84,11 +84,6 @@ seem to indicate that ``kawipiko``'s performance is 6 times less than plain HTTP
 In this regard NGinx is much better, having a HTTP/2 performance similar to plain HTTPS with HTTP/1.
 
 
-Regarding HTTP/3, given that the QUIC library is still experimental,
-my initial benchmarks seem to indicate that ``kawipiko``'s performance is quite poor
-(at about 5k requests / second).
-
-
 
 
 --------

@@ -26,7 +26,6 @@ kawipiko -- blazingly fast static HTTP server
     --bind-2 <ip>:<port>      (HTTP, only HTTP/1.1, Go net/http)
     --bind-tls <ip>:<port>    (HTTPS, only HTTP/1.1, FastHTTP)
     --bind-tls-2 <ip>:<port>  (HTTPS, with HTTP/2, Go net/http)
-    --bind-quic <ip>:<port>   (HTTPS, with HTTP/3)
 
     --http1-disable
     --http2-disable
@@ -86,7 +85,7 @@ Flags
 .....
 
 
-``--bind <ip:port>``, ``--bind-tls <ip:port>``, ``--bind-2 <ip:port>``, ``--bind-tls-2 <ip:port>``, and ``--bind-quic <ip:port>``
+``--bind <ip:port>``, ``--bind-tls <ip:port>``, ``--bind-2 <ip:port>``, and ``--bind-tls-2 <ip:port>``
 
     The IP and port to listen for requests with:
 
@@ -94,7 +93,6 @@ Flags
     * (secure) HTTP/1.1 over TLS for ``--bind-tls``, leveraging ``fasthttp`` library;
     * (insecure) HTTP/1.1 for ``--bind-2``, leveraging Go's ``net/http`` library; (not as performant as the ``fasthttp`` powered endpoint;)
     * (secure) H2 or HTTP/1.1 over TLS for ``--bind-tls-2``, leveraging Go's ``net/http``;  (not as performant as the ``fasthttp`` powered endpoint;)
-    * (secure) H3 over QUIC for ``--bind-quic``, leveraging ``github.com/lucas-clemente/quic-go`` library;  (given that H3 is still a new protocol, this must be used with caution;  also one should use the ``--http3-alt-svc <ip:port>``;)
 
     * if one uses just ``--bind-tls`` (without ``--bind-tls-2``, and without ``--http2-disabled``), then the TLS endpoint is split between ``fasthttp`` for HTTP/1.1 and Go's ``net/http`` for H2;
 
@@ -215,7 +213,7 @@ Flags
 
     It starts the server in a "dummy" mode, ignoring all archive related arguments and always responding with ``hello world!\n`` (unless ``--dummy-empty`` was used) and without additional headers except the HTTP status line and ``Content-Length``.
 
-    This argument can be used to benchmark the raw performance of the underlying ``fasthttp``, Go's ``net/http``, or QUIC performance;  this is the upper limit of the achievable performance given the underlying technologies.
+    This argument can be used to benchmark the raw performance of the underlying ``fasthttp``, or Go's ``net/http``;  this is the upper limit of the achievable performance given the underlying technologies.
     (From my own benchmarks ``kawipiko``'s adds only about ~15% overhead when actually serving the ``hello-world.cdb`` archive.)
 
 ``--dummy-delay <duration>``

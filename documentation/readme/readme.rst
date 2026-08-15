@@ -44,7 +44,7 @@ About
 ``kawipiko`` is a **lightweight static HTTP server** written in Go;
 focused on serving static content **as fast and efficient as possible**,
 with the **lowest latency**, and with the lowest resource consumption (either CPU, RAM, IO);
-supporting both **HTTP/1 (with or without TLS), HTTP/2 and HTTP/3 (over QUIC)**;
+supporting both **HTTP/1 (with or without TLS), and HTTP/2**;
 available as a **single statically linked executable** without any other dependencies.
 
 
@@ -153,7 +153,7 @@ Workflow
 
 The project provides the following executables (statically linked, without any other dependencies):
 
-* ``kawipiko-server`` -- which serves the static content from the CDB archive either via HTTP (with or without TLS), HTTP/2 or HTTP/3 (over QUIC);
+* ``kawipiko-server`` -- which serves the static content from the CDB archive either via HTTP (with or without TLS), or HTTP/2;
 
 * ``kawipiko-archiver`` -- which creates the CDB archive from a source folder holding the static content,
   optionally compressing and minifying files;
@@ -367,8 +367,6 @@ The following is a list of the most important features:
 * support for HTTP/1 (with or without TLS), by leveraging ``github.com/valyala/fasthttp``;
 
 * support for HTTP/2, by leveraging Go's ``net/http``;
-
-* support for HTTP/3 (over QUIC), by leveraging ``github.com/lucas-clemente/quic-go``;
 
 
 

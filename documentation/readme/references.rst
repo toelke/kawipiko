@@ -36,12 +36,6 @@ References
     * used by ``kawipiko``;
 
 
-.. [quic-go]
-    * `quic-go <https://github.com/lucas-clemente/quic-go>`__ (project @GitHub);
-    * supports HTTP/3 (over QUIC);
-    * used by ``kawipiko``;
-
-
 .. [Zopfli]
     * `Zopfli <https://en.wikipedia.org/wiki/Zopfli>`__ (@Wikipedia);
     * `Zopfli <https://github.com/google/zopfli>`__ (project @GitHub, reference implementation by Google);
@@ -83,7 +77,7 @@ References
     * `nghttp2 <https://github.com/nghttp2/nghttp2>`__ (project @GitHub);
     * modern HTTP benchmarking tool;
     * multi threaded, implemented in C, with event loop;
-    * supports HTTP/1 (with TLS), HTTP/3, and HTTP/3 (over QUIC);
+    * supports HTTP/1 (with TLS), and HTTP/2;
 
 
 .. [Netlify]
