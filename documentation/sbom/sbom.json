@@ -2,231 +2,224 @@
   {
     "name": "github.com/Masterminds/goutils",
     "version": "v1.1.1",
-    "purl": "pkg:golang/github.com/Masterminds/goutils@v1.1.1?type=module",
+    "purl": "pkg:golang/github.com/Masterminds/goutils@v1.1.1?goarch=amd64&goos=linux&type=module",
     "license": "Apache-2.0",
     "vcs": "https://github.com/Masterminds/goutils"
   },
   {
     "name": "github.com/Masterminds/semver",
     "version": "v1.5.0",
-    "purl": "pkg:golang/github.com/Masterminds/semver@v1.5.0?type=module",
+    "purl": "pkg:golang/github.com/Masterminds/semver@v1.5.0?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/Masterminds/semver"
   },
   {
     "name": "github.com/andybalholm/brotli",
     "version": "v1.0.4",
-    "purl": "pkg:golang/github.com/andybalholm/brotli@v1.0.4?type=module",
+    "purl": "pkg:golang/github.com/andybalholm/brotli@v1.0.4?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/andybalholm/brotli"
   },
   {
     "name": "github.com/cipriancraciun/go-cdb-lib",
     "version": "v0.0.0-20190809203657-d959ce9cc674",
-    "purl": "pkg:golang/github.com/cipriancraciun/go-cdb-lib@v0.0.0-20190809203657-d959ce9cc674?type=module",
+    "purl": "pkg:golang/github.com/cipriancraciun/go-cdb-lib@v0.0.0-20190809203657-d959ce9cc674?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/cipriancraciun/go-cdb-lib"
   },
   {
     "name": "github.com/foobaz/go-zopfli",
     "version": "v0.0.0-20140122214029-7432051485e2",
-    "purl": "pkg:golang/github.com/foobaz/go-zopfli@v0.0.0-20140122214029-7432051485e2?type=module",
+    "purl": "pkg:golang/github.com/foobaz/go-zopfli@v0.0.0-20140122214029-7432051485e2?goarch=amd64&goos=linux&type=module",
     "license": "{unknown}",
     "vcs": "https://github.com/foobaz/go-zopfli"
   },
   {
     "name": "github.com/fsnotify/fsnotify",
     "version": "v1.5.4",
-    "purl": "pkg:golang/github.com/fsnotify/fsnotify@v1.5.4?type=module",
+    "purl": "pkg:golang/github.com/fsnotify/fsnotify@v1.5.4?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "https://github.com/fsnotify/fsnotify"
   },
   {
     "name": "github.com/go-task/slim-sprig",
     "version": "v2.20.0+incompatible",
-    "purl": "pkg:golang/github.com/go-task/slim-sprig@v2.20.0+incompatible?type=module",
+    "purl": "pkg:golang/github.com/go-task/slim-sprig@v2.20.0+incompatible?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/go-task/slim-sprig"
   },
   {
     "name": "github.com/golang/mock",
     "version": "v1.6.0",
-    "purl": "pkg:golang/github.com/golang/mock@v1.6.0?type=module",
+    "purl": "pkg:golang/github.com/golang/mock@v1.6.0?goarch=amd64&goos=linux&type=module",
     "license": "Apache-2.0",
     "vcs": "https://github.com/golang/mock"
   },
   {
     "name": "github.com/google/uuid",
     "version": "v1.3.0",
-    "purl": "pkg:golang/github.com/google/uuid@v1.3.0?type=module",
+    "purl": "pkg:golang/github.com/google/uuid@v1.3.0?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "https://github.com/google/uuid"
   },
   {
     "name": "github.com/huandu/xstrings",
     "version": "v1.3.2",
-    "purl": "pkg:golang/github.com/huandu/xstrings@v1.3.2?type=module",
+    "purl": "pkg:golang/github.com/huandu/xstrings@v1.3.2?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/huandu/xstrings"
   },
   {
     "name": "github.com/imdario/mergo",
     "version": "v0.3.13",
-    "purl": "pkg:golang/github.com/imdario/mergo@v0.3.13?type=module",
+    "purl": "pkg:golang/github.com/imdario/mergo@v0.3.13?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "https://github.com/imdario/mergo"
   },
   {
     "name": "github.com/klauspost/compress",
     "version": "v1.15.9",
-    "purl": "pkg:golang/github.com/klauspost/compress@v1.15.9?type=module",
+    "purl": "pkg:golang/github.com/klauspost/compress@v1.15.9?goarch=amd64&goos=linux&type=module",
     "license": "Apache-2.0",
     "vcs": "https://github.com/klauspost/compress"
   },
   {
     "name": "github.com/klauspost/cpuid/v2",
     "version": "v2.1.1",
-    "purl": "pkg:golang/github.com/klauspost/cpuid/v2@v2.1.1?type=module",
+    "purl": "pkg:golang/github.com/klauspost/cpuid/v2@v2.1.1?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/klauspost/cpuid"
   },
   {
     "name": "github.com/lucas-clemente/quic-go",
     "version": "v0.29.0",
-    "purl": "pkg:golang/github.com/lucas-clemente/quic-go@v0.29.0?type=module",
+    "purl": "pkg:golang/github.com/lucas-clemente/quic-go@v0.29.0?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/lucas-clemente/quic-go"
   },
   {
     "name": "github.com/marten-seemann/qpack",
     "version": "v0.2.1",
-    "purl": "pkg:golang/github.com/marten-seemann/qpack@v0.2.1?type=module",
+    "purl": "pkg:golang/github.com/marten-seemann/qpack@v0.2.1?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/marten-seemann/qpack"
   },
   {
     "name": "github.com/marten-seemann/qtls-go1-18",
     "version": "v0.1.2",
-    "purl": "pkg:golang/github.com/marten-seemann/qtls-go1-18@v0.1.2?type=module",
+    "purl": "pkg:golang/github.com/marten-seemann/qtls-go1-18@v0.1.2?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "https://github.com/marten-seemann/qtls-go1-18"
   },
   {
     "name": "github.com/marten-seemann/qtls-go1-19",
     "version": "v0.1.0",
-    "purl": "pkg:golang/github.com/marten-seemann/qtls-go1-19@v0.1.0?type=module",
+    "purl": "pkg:golang/github.com/marten-seemann/qtls-go1-19@v0.1.0?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "https://github.com/marten-seemann/qtls-go1-19"
   },
   {
     "name": "github.com/nxadm/tail",
     "version": "v1.4.8",
-    "purl": "pkg:golang/github.com/nxadm/tail@v1.4.8?type=module",
+    "purl": "pkg:golang/github.com/nxadm/tail@v1.4.8?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/nxadm/tail"
   },
   {
     "name": "github.com/onsi/ginkgo",
     "version": "v1.16.5",
-    "purl": "pkg:golang/github.com/onsi/ginkgo@v1.16.5?type=module",
+    "purl": "pkg:golang/github.com/onsi/ginkgo@v1.16.5?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/onsi/ginkgo"
   },
   {
-    "name": "github.com/seccomp/libseccomp-golang",
-    "version": "v0.10.0",
-    "purl": "pkg:golang/github.com/seccomp/libseccomp-golang@v0.10.0?type=module",
-    "license": "BSD-2-Clause",
-    "vcs": "https://github.com/seccomp/libseccomp-golang"
-  },
-  {
     "name": "github.com/valyala/bytebufferpool",
     "version": "v1.0.0",
-    "purl": "pkg:golang/github.com/valyala/bytebufferpool@v1.0.0?type=module",
+    "purl": "pkg:golang/github.com/valyala/bytebufferpool@v1.0.0?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/valyala/bytebufferpool"
   },
   {
     "name": "github.com/valyala/fasthttp",
     "version": "v1.40.0",
-    "purl": "pkg:golang/github.com/valyala/fasthttp@v1.40.0?type=module",
+    "purl": "pkg:golang/github.com/valyala/fasthttp@v1.40.0?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/valyala/fasthttp"
   },
   {
     "name": "github.com/valyala/tcplisten",
     "version": "v1.0.0",
-    "purl": "pkg:golang/github.com/valyala/tcplisten@v1.0.0?type=module",
+    "purl": "pkg:golang/github.com/valyala/tcplisten@v1.0.0?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "https://github.com/valyala/tcplisten"
   },
   {
     "name": "github.com/zeebo/blake3",
     "version": "v0.2.3",
-    "purl": "pkg:golang/github.com/zeebo/blake3@v0.2.3?type=module",
+    "purl": "pkg:golang/github.com/zeebo/blake3@v0.2.3?goarch=amd64&goos=linux&type=module",
     "license": "CC0-1.0",
     "vcs": "https://github.com/zeebo/blake3"
   },
   {
     "name": "go.etcd.io/bbolt",
     "version": "v1.3.6",
-    "purl": "pkg:golang/go.etcd.io/bbolt@v1.3.6?type=module",
+    "purl": "pkg:golang/go.etcd.io/bbolt@v1.3.6?goarch=amd64&goos=linux&type=module",
     "license": "MIT",
     "vcs": "{unknown}"
   },
   {
     "name": "golang.org/x/crypto",
     "version": "v0.0.0-20220829220503-c86fa9a7ed90",
-    "purl": "pkg:golang/golang.org/x/crypto@v0.0.0-20220829220503-c86fa9a7ed90?type=module",
+    "purl": "pkg:golang/golang.org/x/crypto@v0.0.0-20220829220503-c86fa9a7ed90?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "{unknown}"
   },
   {
     "name": "golang.org/x/exp",
     "version": "v0.0.0-20220907003533-145caa8ea1d0",
-    "purl": "pkg:golang/golang.org/x/exp@v0.0.0-20220907003533-145caa8ea1d0?type=module",
+    "purl": "pkg:golang/golang.org/x/exp@v0.0.0-20220907003533-145caa8ea1d0?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "{unknown}"
   },
   {
     "name": "golang.org/x/mod",
     "version": "v0.6.0-dev.0.20220419223038-86c51ed26bb4",
-    "purl": "pkg:golang/golang.org/x/mod@v0.6.0-dev.0.20220419223038-86c51ed26bb4?type=module",
+    "purl": "pkg:golang/golang.org/x/mod@v0.6.0-dev.0.20220419223038-86c51ed26bb4?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "{unknown}"
   },
   {
     "name": "golang.org/x/net",
     "version": "v0.0.0-20220906165146-f3363e06e74c",
-    "purl": "pkg:golang/golang.org/x/net@v0.0.0-20220906165146-f3363e06e74c?type=module",
+    "purl": "pkg:golang/golang.org/x/net@v0.0.0-20220906165146-f3363e06e74c?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "{unknown}"
   },
   {
     "name": "golang.org/x/sys",
     "version": "v0.0.0-20220907062415-87db552b00fd",
-    "purl": "pkg:golang/golang.org/x/sys@v0.0.0-20220907062415-87db552b00fd?type=module",
+    "purl": "pkg:golang/golang.org/x/sys@v0.0.0-20220907062415-87db552b00fd?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "https://github.com/golang/sys"
   },
   {
     "name": "golang.org/x/text",
     "version": "v0.3.7",
-    "purl": "pkg:golang/golang.org/x/text@v0.3.7?type=module",
+    "purl": "pkg:golang/golang.org/x/text@v0.3.7?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "https://github.com/golang/text"
   },
   {
     "name": "golang.org/x/tools",
     "version": "v0.1.12",
-    "purl": "pkg:golang/golang.org/x/tools@v0.1.12?type=module",
+    "purl": "pkg:golang/golang.org/x/tools@v0.1.12?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "{unknown}"
   },
   {
     "name": "gopkg.in/tomb.v1",
     "version": "v1.0.0-20141024135613-dd632973f1e7",
-    "purl": "pkg:golang/gopkg.in/tomb.v1@v1.0.0-20141024135613-dd632973f1e7?type=module",
+    "purl": "pkg:golang/gopkg.in/tomb.v1@v1.0.0-20141024135613-dd632973f1e7?goarch=amd64&goos=linux&type=module",
     "license": "BSD-3-Clause",
     "vcs": "https://github.com/go-tomb/tomb"
   }
