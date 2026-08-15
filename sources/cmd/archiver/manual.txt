@@ -1,7 +1,5 @@
 KAWIPIKO-ARCHIVER(1)               kawipiko               KAWIPIKO-ARCHIVER(1)
 
-
-
 NAME
        kawipiko -- blazingly fast static HTTP server - kawipiko-archiver
 
@@ -211,6 +209,4 @@ SYMLINKS, HARDLINKS, LOOPS, AND DUPLICATED FILES
        stored only once.  (The same applies to duplicated files that have
        exactly the same data.)
 
-
-
-volution.ro                       2023-03-05              KAWIPIKO-ARCHIVER(1)
+volution.ro                       2026-08-15              KAWIPIKO-ARCHIVER(1)
