@@ -112,12 +112,6 @@ func (_buffer *HttpResponseWriterHeadersBuffer) WriteTo (_response http.Response
 		return
 	}
 	
-	_quicHttp3Type := atomic.LoadUintptr (&_httpResponseWriterHeadersMagic_quicHttp3_type)
-	if _responseType == _quicHttp3Type {
-		_buffer.WriteToQuicHttp3 (_response)
-		return
-	}
-	
 	if _httpResponseWriterHeadersMagic_detect (_response) {
 		goto _redo
 	} else {
@@ -128,7 +122,6 @@ func (_buffer *HttpResponseWriterHeadersBuffer) WriteTo (_response http.Response
 
 var _httpResponseWriterHeadersMagic_netHttp1_type uintptr
 var _httpResponseWriterHeadersMagic_netHttp2_type uintptr
-var _httpResponseWriterHeadersMagic_quicHttp3_type uintptr
 
 
 
@@ -202,14 +195,6 @@ func (_buffer *HttpResponseWriterHeadersBuffer) WriteToNetHttp2 (_response http.
 
 
 
-func (_buffer *HttpResponseWriterHeadersBuffer) WriteToQuicHttp3 (_response http.ResponseWriter) () {
-	
-	_buffer.WriteToGenericResponse (_response)
-}
-
-
-
-
 func _httpResponseWriterHeadersMagic_detect (_response http.ResponseWriter) (bool) {
 	
 	
@@ -270,15 +255,6 @@ func _httpResponseWriterHeadersMagic_detect (_response http.ResponseWriter) (boo
 			atomic.StoreInt32 (&_httpResponseWriterHeadersMagic_netHttp2_snapHeaderOffset, _snapHeaderOffset)
 			
 			atomic.StoreUintptr (&_httpResponseWriterHeadersMagic_netHttp2_type, _responseRawType)
-			
-			return true
-		}
-		
-		case (_responsePackage == "github.com/lucas-clemente/quic-go/http3") && (_responseTypeName == "responseWriter") : {
-			
-			log.Printf ("[dd] [90b8f7c6]  [magic...]  detected QuicHttp3 (`%s.%s`) with type `%08x`;", _responsePackage, _responseTypeName, _responseRawType)
-			
-			atomic.StoreUintptr (&_httpResponseWriterHeadersMagic_quicHttp3_type, _responseRawType)
 			
 			return true
 		}
