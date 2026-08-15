@@ -378,7 +378,6 @@ ul.auto-toc {
 --bind-2 &lt;ip&gt;:&lt;port&gt;      (HTTP, only HTTP/1.1, Go net/http)
 --bind-tls &lt;ip&gt;:&lt;port&gt;    (HTTPS, only HTTP/1.1, FastHTTP)
 --bind-tls-2 &lt;ip&gt;:&lt;port&gt;  (HTTPS, with HTTP/2, Go net/http)
---bind-quic &lt;ip&gt;:&lt;port&gt;   (HTTPS, with HTTP/3)
 
 --http1-disable
 --http2-disable
@@ -429,7 +428,7 @@ ul.auto-toc {
 <hr class="docutils" />
 <div class="section" id="flags">
 <h1>Flags</h1>
-<p><tt class="docutils literal"><span class="pre">--bind</span> &lt;ip:port&gt;</tt>, <tt class="docutils literal"><span class="pre">--bind-tls</span> &lt;ip:port&gt;</tt>, <tt class="docutils literal"><span class="pre">--bind-2</span> &lt;ip:port&gt;</tt>, <tt class="docutils literal"><span class="pre">--bind-tls-2</span> &lt;ip:port&gt;</tt>, and <tt class="docutils literal"><span class="pre">--bind-quic</span> &lt;ip:port&gt;</tt></p>
+<p><tt class="docutils literal"><span class="pre">--bind</span> &lt;ip:port&gt;</tt>, <tt class="docutils literal"><span class="pre">--bind-tls</span> &lt;ip:port&gt;</tt>, <tt class="docutils literal"><span class="pre">--bind-2</span> &lt;ip:port&gt;</tt>, and <tt class="docutils literal"><span class="pre">--bind-tls-2</span> &lt;ip:port&gt;</tt></p>
 <blockquote>
 <p>The IP and port to listen for requests with:</p>
 <ul class="simple">
@@ -437,7 +436,6 @@ ul.auto-toc {
 <li>(secure) HTTP/1.1 over TLS for <tt class="docutils literal"><span class="pre">--bind-tls</span></tt>, leveraging <tt class="docutils literal">fasthttp</tt> library;</li>
 <li>(insecure) HTTP/1.1 for <tt class="docutils literal"><span class="pre">--bind-2</span></tt>, leveraging Go's <tt class="docutils literal">net/http</tt> library; (not as performant as the <tt class="docutils literal">fasthttp</tt> powered endpoint;)</li>
 <li>(secure) H2 or HTTP/1.1 over TLS for <tt class="docutils literal"><span class="pre">--bind-tls-2</span></tt>, leveraging Go's <tt class="docutils literal">net/http</tt>;  (not as performant as the <tt class="docutils literal">fasthttp</tt> powered endpoint;)</li>
-<li>(secure) H3 over QUIC for <tt class="docutils literal"><span class="pre">--bind-quic</span></tt>, leveraging <tt class="docutils literal"><span class="pre">github.com/lucas-clemente/quic-go</span></tt> library;  (given that H3 is still a new protocol, this must be used with caution;  also one should use the <tt class="docutils literal"><span class="pre">--http3-alt-svc</span> &lt;ip:port&gt;</tt>;)</li>
 <li>if one uses just <tt class="docutils literal"><span class="pre">--bind-tls</span></tt> (without <tt class="docutils literal"><span class="pre">--bind-tls-2</span></tt>, and without <tt class="docutils literal"><span class="pre">--http2-disabled</span></tt>), then the TLS endpoint is split between <tt class="docutils literal">fasthttp</tt> for HTTP/1.1 and Go's <tt class="docutils literal">net/http</tt> for H2;</li>
 </ul>
 </blockquote>
@@ -542,7 +540,7 @@ Enables all logging messages.</blockquote>
 <p><tt class="docutils literal"><span class="pre">--dummy</span></tt>, <tt class="docutils literal"><span class="pre">--dummy-empty</span></tt></p>
 <blockquote>
 <p>It starts the server in a &quot;dummy&quot; mode, ignoring all archive related arguments and always responding with <tt class="docutils literal">hello <span class="pre">world!\n</span></tt> (unless <tt class="docutils literal"><span class="pre">--dummy-empty</span></tt> was used) and without additional headers except the HTTP status line and <tt class="docutils literal"><span class="pre">Content-Length</span></tt>.</p>
-<p>This argument can be used to benchmark the raw performance of the underlying <tt class="docutils literal">fasthttp</tt>, Go's <tt class="docutils literal">net/http</tt>, or QUIC performance;  this is the upper limit of the achievable performance given the underlying technologies.
+<p>This argument can be used to benchmark the raw performance of the underlying <tt class="docutils literal">fasthttp</tt>, or Go's <tt class="docutils literal">net/http</tt>;  this is the upper limit of the achievable performance given the underlying technologies.
 (From my own benchmarks <tt class="docutils literal">kawipiko</tt>'s adds only about ~15% overhead when actually serving the <tt class="docutils literal"><span class="pre">hello-world.cdb</span></tt> archive.)</p>
 </blockquote>
 <p><tt class="docutils literal"><span class="pre">--dummy-delay</span> &lt;duration&gt;</tt></p>

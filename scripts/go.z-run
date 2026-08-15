@@ -784,7 +784,7 @@
 	export -- GOTMPDIR="${_outputs}/go/tmp"
 	export -- GOCACHE="${_outputs}/go/cache"
 	
-	case "${GOVER:-1.19}" in
+	case "${GOVER:-latest}" in
 		( 1.26 | latest )
 			test -n "${__GO_INSTALL_1_26:-}"
 			_go="$( exec -- readlink -e -- "${__GO_INSTALL_1_26}/bin/go" )"
@@ -792,10 +792,6 @@
 		( 1.20 )
 			test -n "${__GO_INSTALL_1_20:-}"
 			_go="$( exec -- readlink -e -- "${__GO_INSTALL_1_20}/bin/go" )"
-		;;
-		( 1.19 )
-			test -n "${__GO_INSTALL_1_19:-}"
-			_go="$( exec -- readlink -e -- "${__GO_INSTALL_1_19}/bin/go" )"
 		;;
 		( custom )
 			_go="$( exec -- readlink -e -- "${_outputs}/go-tool" )"

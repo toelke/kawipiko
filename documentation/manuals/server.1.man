@@ -55,7 +55,6 @@ kawipiko -- blazingly fast static HTTP server \- kawipiko-server
 \-\-bind\-2 <ip>:<port>      (HTTP, only HTTP/1.1, Go net/http)
 \-\-bind\-tls <ip>:<port>    (HTTPS, only HTTP/1.1, FastHTTP)
 \-\-bind\-tls\-2 <ip>:<port>  (HTTPS, with HTTP/2, Go net/http)
-\-\-bind\-quic <ip>:<port>   (HTTPS, with HTTP/3)
 
 \-\-http1\-disable
 \-\-http2\-disable
@@ -115,7 +114,7 @@ kawipiko -- blazingly fast static HTTP server \- kawipiko-server
 .sp
 .SH FLAGS
 .sp
-\fB\-\-bind <ip:port>\fP, \fB\-\-bind\-tls <ip:port>\fP, \fB\-\-bind\-2 <ip:port>\fP, \fB\-\-bind\-tls\-2 <ip:port>\fP, and \fB\-\-bind\-quic <ip:port>\fP
+\fB\-\-bind <ip:port>\fP, \fB\-\-bind\-tls <ip:port>\fP, \fB\-\-bind\-2 <ip:port>\fP, and \fB\-\-bind\-tls\-2 <ip:port>\fP
 .INDENT 0.0
 .INDENT 3.5
 The IP and port to listen for requests with:
@@ -128,8 +127,6 @@ The IP and port to listen for requests with:
 (insecure) HTTP/1.1 for \fB\-\-bind\-2\fP, leveraging Go\(aqs \fBnet/http\fP library; (not as performant as the \fBfasthttp\fP powered endpoint;)
 .IP \(bu 2
 (secure) H2 or HTTP/1.1 over TLS for \fB\-\-bind\-tls\-2\fP, leveraging Go\(aqs \fBnet/http\fP;  (not as performant as the \fBfasthttp\fP powered endpoint;)
-.IP \(bu 2
-(secure) H3 over QUIC for \fB\-\-bind\-quic\fP, leveraging \fBgithub.com/lucas\-clemente/quic\-go\fP library;  (given that H3 is still a new protocol, this must be used with caution;  also one should use the \fB\-\-http3\-alt\-svc <ip:port>\fP;)
 .IP \(bu 2
 if one uses just \fB\-\-bind\-tls\fP (without \fB\-\-bind\-tls\-2\fP, and without \fB\-\-http2\-disabled\fP), then the TLS endpoint is split between \fBfasthttp\fP for HTTP/1.1 and Go\(aqs \fBnet/http\fP for H2;
 .UNINDENT
@@ -328,7 +325,7 @@ Enables all logging messages.
 .INDENT 3.5
 It starts the server in a \(dqdummy\(dq mode, ignoring all archive related arguments and always responding with \fBhello world!\en\fP (unless \fB\-\-dummy\-empty\fP was used) and without additional headers except the HTTP status line and \fBContent\-Length\fP\&.
 .sp
-This argument can be used to benchmark the raw performance of the underlying \fBfasthttp\fP, Go\(aqs \fBnet/http\fP, or QUIC performance;  this is the upper limit of the achievable performance given the underlying technologies.
+This argument can be used to benchmark the raw performance of the underlying \fBfasthttp\fP, or Go\(aqs \fBnet/http\fP;  this is the upper limit of the achievable performance given the underlying technologies.
 (From my own benchmarks \fBkawipiko\fP\(aqs adds only about ~15% overhead when actually serving the \fBhello\-world.cdb\fP archive.)
 .UNINDENT
 .UNINDENT
