@@ -94,17 +94,6 @@
 			-X "github.com/volution/kawipiko/embedded.BUILD_GIT_HASH=${_build_git_hash}"
 		)
 	
-	_seccomp="${__BUILD_SECCOMP:-false}"
-	if test "${_seccomp}" == true ; then
-		_tags+=(
-				seccomp
-			)
-		_ldflags+=(
-				-linkmode external
-				-extldflags -static
-			)
-	fi
-	
 	_tags="$( printf -- '%s,' "${_tags[@]}" )"
 	_gcflags="$( printf -- '%s ' "${_gcflags[@]}" )"
 	_ldflags="$( printf -- '%s ' "${_ldflags[@]}" )"
@@ -162,17 +151,6 @@
 			-X "github.com/volution/kawipiko/embedded.BUILD_TARGET=${_build_target}"
 			-X "github.com/volution/kawipiko/embedded.BUILD_GIT_HASH=${_build_git_hash}"
 		)
-	
-	_seccomp="${__BUILD_SECCOMP:-false}"
-	if test "${_seccomp}" == true ; then
-		_tags+=(
-				seccomp
-			)
-		_ldflags+=(
-				-linkmode external
-				-extldflags -static
-			)
-	fi
 	
 	_tags="$( printf -- '%s,' "${_tags[@]}" )"
 	_gcflags="$( printf -- '%s ' "${_gcflags[@]}" )"
@@ -233,9 +211,6 @@
 	printf -- '[ii]  building for `%s`...\n' 'linux / armv6' >&2
 	"${ZRUN}" ':: go / build / * / debug / linux / armv6' "${@}"
 	
-	printf -- '[ii]  building for `%s`...\n' 'linux / x86_64--seccomp' >&2
-	"${ZRUN}" ':: go / build / * / debug / linux / x86_64--seccomp' "${@}"
-	
 	printf -- '[ii]  building for `%s`...\n' 'darwin / x86_64' >&2
 	"${ZRUN}" ':: go / build / * / debug / darwin / x86_64' "${@}"
 	printf -- '[ii]  building for `%s`...\n' 'darwin / aarch64' >&2
@@ -272,14 +247,6 @@
 
 --<< go / build / * / debug / native
 	export -- __BUILD_SUFFIX=native
-	exec -- "${ZRUN}" ':: go / build / * / debug' "${@}"
-!!
-
---<< go / build / * / debug / linux / x86_64--seccomp
-	export -- GOOS=linux
-	export -- GOARCH=amd64
-	export -- __BUILD_SUFFIX=linux--x86_64--seccomp
-	export -- __BUILD_SECCOMP=true
 	exec -- "${ZRUN}" ':: go / build / * / debug' "${@}"
 !!
 
@@ -440,9 +407,6 @@
 	printf -- '[ii]  building for `%s`...\n' 'linux / armv6' >&2
 	"${ZRUN}" ':: go / build / * / release / linux / armv6' "${@}"
 	
-	printf -- '[ii]  building for `%s`...\n' 'linux / x86_64--seccomp' >&2
-	"${ZRUN}" ':: go / build / * / release / linux / x86_64--seccomp' "${@}"
-	
 	printf -- '[ii]  building for `%s`...\n' 'darwin / x86_64' >&2
 	"${ZRUN}" ':: go / build / * / release / darwin / x86_64' "${@}"
 	printf -- '[ii]  building for `%s`...\n' 'darwin / aarch64' >&2
@@ -479,14 +443,6 @@
 
 --<< go / build / * / release / native
 	export -- __BUILD_SUFFIX=native
-	exec -- "${ZRUN}" ':: go / build / * / release' "${@}"
-!!
-
---<< go / build / * / release / linux / x86_64--seccomp
-	export -- GOOS=linux
-	export -- GOARCH=amd64
-	export -- __BUILD_SUFFIX=linux--x86_64--seccomp
-	export -- __BUILD_SECCOMP=true
 	exec -- "${ZRUN}" ':: go / build / * / release' "${@}"
 !!
 
