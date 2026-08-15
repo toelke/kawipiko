@@ -22,7 +22,6 @@
 | `github.com/marten-seemann/qtls-go1-19` | `v0.1.0` | `BSD-3-Clause` | <https://github.com/marten-seemann/qtls-go1-19> |
 | `github.com/nxadm/tail` | `v1.4.8` | `MIT` | <https://github.com/nxadm/tail> |
 | `github.com/onsi/ginkgo` | `v1.16.5` | `MIT` | <https://github.com/onsi/ginkgo> |
-| `github.com/seccomp/libseccomp-golang` | `v0.10.0` | `BSD-2-Clause` | <https://github.com/seccomp/libseccomp-golang> |
 | `github.com/valyala/bytebufferpool` | `v1.0.0` | `MIT` | <https://github.com/valyala/bytebufferpool> |
 | `github.com/valyala/fasthttp` | `v1.40.0` | `MIT` | <https://github.com/valyala/fasthttp> |
 | `github.com/valyala/tcplisten` | `v1.0.0` | `MIT` | <https://github.com/valyala/tcplisten> |
