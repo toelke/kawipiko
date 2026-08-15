@@ -1,4 +1,4 @@
 untrusted comment: signature from minisign secret key
-RURyRsmb5Uuugtskg3oMTY4aGc3FvL6xmS+2HPaFYGUnL2g/54fO67AnB6Oc7BMQi9I24Lvxv2asAGWT+Y0Sn/Rt0zgdguU66QM=
+RURyRsmb5Uuugjav4e0otddz1q7c+mGRz6Hwzxio67kqiuuk3hjQfK3uAKaV0WaF+Mb4xFEnLn9hkclFAi7LKixoP1OxXNuIPAM=
 trusted comment: kawipiko-archiver--darwin--aarch64--v0.1.0--preview
-cnx4O6ljjZftkOqUG4E4HuCPK0INDyfA8lWAEcCReGnBi+tviuZlKUgG7eUxhHdxIp6ekG2mh/splScB+KZCCA==
+y8fHdhgQ0MjjFQ4xxkgatrnkIShygX8AHPAv3Lu7baeOc+dPVRUpqnzR0RlpFrFIVhV3fnaY99T7heHFjO7jDQ==
