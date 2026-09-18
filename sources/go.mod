@@ -1,6 +1,6 @@
 module github.com/volution/kawipiko
 
-go 1.17
+go 1.21
 
 require (
 	github.com/andybalholm/brotli v1.0.4

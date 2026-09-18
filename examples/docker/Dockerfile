@@ -1,4 +1,4 @@
-FROM golang:1.18 AS kawipiko-builder
+FROM golang:1.23 AS kawipiko-builder
 
 RUN mkdir -p -- /tmp/kawipiko/bin /tmp/kawipiko/src /tmp/kawipiko/go && \
   git clone -b development https://github.com/volution/kawipiko.git /tmp/kawipiko/src
