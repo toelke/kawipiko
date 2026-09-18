@@ -135,11 +135,11 @@ func MetadataEncodeBinary (_metadata map[string]string) ([]byte, error) {
 		_value := _metadata[1]
 		if (_key != "") && (_key[0] == '!') {
 			if _key == "!Status" {
-				if _value, _error := strconv.Atoi (_value); _error == nil {
-					if (_value >= 200) && (_value <= 599) {
+				if _status, _error := strconv.Atoi (_value); _error == nil {
+					if (_status >= 200) && (_status <= 599) {
 						// NOP
 					} else {
-						return nil, fmt.Errorf ("[08d97429]  invalid metadata value:  `%d`", _value)
+						return nil, fmt.Errorf ("[08d97429]  invalid metadata value:  `%d`", _status)
 					}
 				} else {
 					return nil, fmt.Errorf ("[7a36c814]  invalid metadata value:  `%s`", _value)

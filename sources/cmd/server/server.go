@@ -1200,7 +1200,7 @@ func main_0 () (error) {
 					} else {
 						LogError (_error, fmt.Sprintf ("[f1bfc927]  [master..]  failed waiting for sub-process `%d`;  ignoring!", _processPid.Pid))
 					}
-					_processesPid[_processIndex] = nil
+					_processesPid[_index] = nil
 					_processesJoin.Done ()
 				} (_processIndex, _processPid)
 			} else {
