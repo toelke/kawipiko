@@ -3,7 +3,6 @@
 package common
 
 
-import "reflect"
 import "unsafe"
 
 
@@ -32,35 +31,34 @@ func NoEscapeString (_input *string) (*string) {
 
 func BytesToString (_input []byte) (string) {
 	
-	// NOTE:  The following is not enough?!
-	return *(*string) (unsafe.Pointer (&_input))
+	// NOTE:  Since Go 1.20 this is the supported way to alias a `[]byte`'s
+	//        backing array as a `string`, without any copying.
+	//        (It replaces the previous `reflect.SliceHeader` / `reflect.StringHeader`
+	//        manipulation, which was not GC-safe.)
 	
-	_output := ""
-	_inputHeader := (*reflect.SliceHeader) (unsafe.Pointer (&_input))
-	_outputHeader := (*reflect.StringHeader) (unsafe.Pointer (&_output))
+	if len (_input) == 0 {
+		return ""
+	}
 	
-	_outputHeader.Data = _inputHeader.Data
-	_outputHeader.Len = _inputHeader.Len
-	
-	return _output
+	return unsafe.String (unsafe.SliceData (_input), len (_input))
 }
 
 
 func StringToBytes (_input string) ([]byte) {
 	
-	// NOTE:  The following is broken!
-	// return *(*[]byte) (unsafe.Pointer (&_input))
+	// NOTE:  Since Go 1.20 this is the supported way to alias a `string`'s
+	//        backing array as a `[]byte`, without any copying.
+	//        (It replaces the previous `reflect.SliceHeader` / `reflect.StringHeader`
+	//        manipulation, which was not GC-safe.)
 	
-	// NOTE:  Based on `https://github.com/valyala/fasthttp/blob/2a6f7db5bbc4d7c11f1ccc0cb827e145b9b7d7ea/bytesconv.go#L342`
-	_output := []byte (nil)
-	_outputHeader := (*reflect.SliceHeader) (unsafe.Pointer (&_output))
-	_inputHeader := (*reflect.StringHeader) (unsafe.Pointer (&_input))
+	// WARNING:  The resulting `[]byte` aliases immutable `string` memory,
+	//           therefore it must never be written to!
 	
-	_outputHeader.Data = _inputHeader.Data
-	_outputHeader.Len = _inputHeader.Len
-	_outputHeader.Cap = _inputHeader.Len
+	if len (_input) == 0 {
+		return nil
+	}
 	
-	return _output
+	return unsafe.Slice (unsafe.StringData (_input), len (_input))
 }
 
 
